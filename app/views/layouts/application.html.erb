@@ -11,6 +11,17 @@
 
   <body>
     <div class="container-fluid">
+    <% if flash[:notice]%>
+      <div class="alert alert-info">
+        <strong><%= notice%></strong>
+      </div>
+    <%end%>
+    <% if flash[:alert]%>
+      <div class="alert alert-warning">
+        <strong><%= alert%></strong>
+      </div>
+   <%end%>
+
       <%= yield %>
     </div>
   </body>
