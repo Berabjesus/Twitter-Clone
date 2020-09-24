@@ -6,23 +6,42 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'tweets', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/9d67ae77a3.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div class="container-fluid">
-    <% if flash[:notice]%>
-      <div class="alert alert-info">
-        <strong><%= notice%></strong>
-      </div>
-    <%end%>
-    <% if flash[:alert]%>
-      <div class="alert alert-warning">
-        <strong><%= alert%></strong>
-      </div>
-   <%end%>
+    <header class="container mb-5">
+      <nav class="nav nav-tabs bg-light d-flex justify-content-between w-100 text-light fixed-top px-5">
+        <div>
+          <li class="nav-item">
+            <%= link_to root_path, class: 'nav-link py-0 twitter-color' do%>
+            <a class="text-muted" href="#"><img class="logo" src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+            <%end%>
+          </li>
+        </div>
+        <div>
+          <a class="btn twitter-bg text-white" href="#">Login</a>
+          <a class="btn twitter-bg text-white" href="#">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container mt-5 d-flex">
+      <% if flash[:notice]%>
+        <div class="alert alert-info">
+          <strong><%= notice%></strong>
+        </div>
+      <%end%>
+      <% if flash[:alert]%>
+        <div class="alert alert-warning">
+          <strong><%= alert%></strong>
+        </div>
+      <%end%>
 
-      <%= yield %>
-    </div>
+        <%= yield %>
+      </main>
   </body>
 </html>

@@ -1,0 +1,33 @@
+<aside class="side-bar d-flex flex-column col-xl-2 border-c ">
+  <%= link_to tweets_path, class: 'sidebar_btn-container mb-4' do%>
+    <div class="d-flex py-2">
+      <i class="fas fa-2x fa-home mr-4 col-xl-2"></i>
+      <p class="bold-font">Home</p>
+    </div>
+  <%end%>
+  <%= link_to new_tweet_path, class: 'sidebar_btn-container mb-4' do%>
+    <div class="d-flex py-2">
+      <i class="fa fa-2x fa-twitter mr-4 col-xl-2"></i>
+      <p class="bold-font">New Tweet</p>
+    </div>
+  <%end%>
+  <%= link_to tweets_path, class: 'sidebar_btn-container mb-4' do%>
+    <div class="d-flex py-2">
+      <i class="fas fa-2x fa-bell mr-4 col-xl-2"></i>
+      <p class="bold-font">Notifications</p>
+    </div>
+  <%end%>
+  <%= link_to tweets_path, class: 'sidebar_btn-container mb-4' do%>
+    <div class="d-flex py-2">
+      <i class="fas fa-2x fa-envelope-open mr-4 col-xl-2"></i>
+      <p class="bold-font">Messages</p>
+    </div>
+  <%end%>
+  <%= link_to tweets_path, class: 'sidebar_btn-container mb-4' do%>
+    <div class="d-flex py-2">
+      <i class="fas fa-2x fa-user-alt mr-4 col-xl-2"></i>
+      <p class="bold-font">Profile</p>
+    </div>
+  <%end%>
+</aside>
+<div class="d-flex col-xl-9 offset-xl-3">

@@ -1,3 +1,46 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// defaults
+:root {
+  --twitter-default: #1da1f2;
+
+}
+.border-c {
+  border: 2px dashed red;
+}
+
+.border-rad {
+  border-radius: 25px;
+}
+
+.twitter-color {
+  color: var(--twitter-default);
+}
+.twitter-bg {
+  background-color: var(--twitter-default);
+}
+
+.bold-font {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+}
+
+// header
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+// side bar
+
+.side-bar {
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar_btn-container:hover * {
+  color: var(--twitter-default);
+  background-color: aqua;
+  border-radius: 2rem;
+}
+
