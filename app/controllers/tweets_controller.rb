@@ -1,14 +1,21 @@
 class TweetsController < ApplicationController
+  before_action :set_tweeet, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
-    @tweets = Tweet.all.order("created_at DESC LIMIT 20")
+    if user_signed_in?
+      @tweets = Tweet.all.order("created_at DESC LIMIT 20")
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def new
-    @tweet = Tweet.new
+    @tweet = current_user.tweets.build
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = current_user.tweets.build(tweet_params)
       if @tweet.save 
        redirect_to tweets_path, notice: 'Tweet was successfully updated.' 
       else

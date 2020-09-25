@@ -19,13 +19,18 @@
         <div>
           <li class="nav-item">
             <%= link_to root_path, class: 'nav-link py-0 twitter-color' do%>
-            <a class="text-muted" href="#"><img class="logo" src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+              <img class="logo" src="https://img.icons8.com/fluent/48/000000/twitter.png"/>
             <%end%>
           </li>
         </div>
         <div>
-          <a class="btn twitter-bg text-white" href="#">Login</a>
-          <a class="btn twitter-bg text-white" href="#">Sign Up</a>
+          <%if user_signed_in?%>
+            <%= link_to current_user.name, edit_user_registration_path, class: 'btn btn-info' %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"btn btn-warning" %>
+          <%else%>
+            <%= link_to 'Sign In', new_user_session_path, class: "btn twitter-bg text-white" %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: "btn twitter-bg text-white" %>
+          <%end%>
         </div>
       </nav>
     </header>

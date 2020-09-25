@@ -5,7 +5,11 @@
       <img class="rounded-circle" src="https://bulma.io/images/placeholders/64x64.png" alt="">
     </div>
     <div class="card col-xl-10 border-0">
-      <div class="card-header bg-white border-0"></div>
+      <div class="card-header bg-white border-0 d-flex">
+        <strong><%= tweet.user.name%></strong>
+        <span class="text-muted">@<%= tweet.user.username%></span>
+        <span class="ml-auto"><%= distance_of_time_in_words(Time.now, tweet.created_at ) %> ago</span>
+      </div>
       <%= link_to tweet_path(tweet) do%>
         <div class="card-body border-0">
           <p><%= tweet.tweet %></p>
