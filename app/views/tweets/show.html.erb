@@ -1,0 +1,19 @@
+<%= render 'sidebar'%>
+  <div class="card col-xl-10 border-bottom ">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <p><%= @tweet.tweet %></p>
+    </div>
+    <div class="card-footer d-flex justify-content-around">
+      <%= link_to edit_tweet_path(@tweet)  do%>
+        <span> <i class="fa fa-pencil"></i></span>
+      <% end%>
+      <%= link_to @tweet, method: :delete, data: { confirm: 'Are you sure?' } do%>
+      <span> <i class="fa fa-trash-o"></i></span>
+      <% end%>
+    </div>
+  </div>
+  <div class="col-xl-4 px-0">
+    <%= render 'search_sidebar'%>
+  </div>
+</div>

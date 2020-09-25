@@ -1,0 +1,25 @@
+<div class="mt-4 border-top d-flex flex-column">
+  <% @tweets.each do |tweet|%>
+  <div class="d-flex flex-row border-bottom my-1">
+    <div class="col-xl-2 pl-0">
+      <img class="rounded-circle" src="https://bulma.io/images/placeholders/64x64.png" alt="">
+    </div>
+    <div class="card col-xl-10 border-0">
+      <div class="card-header bg-white border-0"></div>
+      <%= link_to tweet_path(tweet) do%>
+        <div class="card-body border-0">
+          <p><%= tweet.tweet %></p>
+        </div>
+      <%end%>
+      <div class="card-footer border-0 bg-white d-flex justify-content-around">
+        <%= link_to edit_tweet_path(tweet)  do%>
+          <span> <i class="fa fa-pencil"></i></span>
+        <% end%>
+        <%= link_to tweet, method: :delete, data: { confirm: 'Are you sure?' } do%>
+          <span> <i class="fa fa-trash-o"></i></span>
+        <% end%>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>

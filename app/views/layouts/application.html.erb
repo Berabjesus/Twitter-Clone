@@ -29,7 +29,10 @@
         </div>
       </nav>
     </header>
-    <main class="container mt-5 d-flex">
+    <!-- <div class="notice bg-info">
+      <%= notice %>
+    </div> -->
+    <main class="container mt-5 d-flex flex-column">
       <% if flash[:notice]%>
         <div class="alert alert-info">
           <strong><%= notice%></strong>
@@ -37,11 +40,12 @@
       <%end%>
       <% if flash[:alert]%>
         <div class="alert alert-warning">
-          <strong><%= alert%></strong>
+          <strong><%= alert.html_safe%></strong>
         </div>
       <%end%>
-
-        <%= yield %>
+        <div class="d-flex">
+          <%= yield %>
+        </div>
       </main>
   </body>
 </html>

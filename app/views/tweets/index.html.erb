@@ -1,25 +1,14 @@
+
 <%= render 'sidebar'%>
-  <div class="col-xl-9 d-flex flex-column">
+  <div class="col-xl-8 d-flex flex-column pl-0">
     <%= render partial: "title", locals: {title: 'Home'}%>
     <div class="d-flex">
-      <div class="mr-2">
-        <i class="fas fa-2x fa-user-alt"></i>
-      </div>
-      <div class="w-100">
-        <%= form_with url: '/tweets/new', local: true, class: 'd-flex flex-column' do |form| %>
-          <%= render partial: "form", locals: {form: form}%>
-        <%end%>
-      </div>
+      <%= render partial: "form"%>
     </div>
-    <div class="mt-4 border-top">
-      <% @tweets.each do |tweet|%>
-        <div class="border-bottom ">
-          <p><%= tweet.tweet %></p>
-        </div>
-      <%end%>
-    </div>
+  <%=  render partial: 'feed'%>
   </div>
-  <div class="col-xl-3 border-c">
+  <div class="col-xl-4 px-0">
+    <%= render 'search_sidebar'%>
   </div>
 </div>
 

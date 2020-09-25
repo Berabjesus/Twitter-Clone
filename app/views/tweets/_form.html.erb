@@ -1,7 +1,19 @@
-<div class="form-group">
-  <%= form.text_area :tweet, placeholder: "What's happening?", rows: '2', class: 'form-control w-100 border border-bottom border-top-0 border-left-0 border-right-0'%>
+<div class="mr-2">
+  <img class="rounded-circle" src="https://bulma.io/images/placeholders/64x64.png" alt="">
+</div>
+<div class="w-100">
+  <%= form_with url: '/tweets', local: true, class: 'd-flex flex-column' do |form| %>
+    <div class="form-group">
+      <%= form.text_area :tweet, placeholder: "What's happening?", rows: '2', class: 'form-control w-100 border border-bottom border-top-0 border-left-0 border-right-0'%>
+    </div>
+    <div class="actions align-self-end">
+      <%= form.submit 'Tweet', class:'btn twitter-bg text-white border-rad' %>
+    </div>      
+  <%end%>
 </div>
 
-<div class="actions align-self-end">
-  <%= form.submit 'Tweet', class:'btn twitter-bg text-white border-rad' %>
-</div>      
+
+
+
+
+

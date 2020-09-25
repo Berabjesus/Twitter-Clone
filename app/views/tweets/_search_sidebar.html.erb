@@ -1,0 +1,38 @@
+<div class="container-fuid side-bar ">
+  <form class="px-0 mx-0" action="#">
+    <input class="px-0 mx-0 bg-light w-100 border-rad border-0 py-3 pl-3" type="text" name="#" id="" placeholder="Search Here">
+  </form>
+  <div class="card bg-light mt-2 border-rad side-bar-card">
+    <div class="card-header">
+      <h3 class="font-weight-bolder">Trends For You</h3>
+    </div>
+    <div class="card-body">
+    <% unless @tweets.nil? %>
+      <%count = 0%>
+      <% @tweets.length.times do |i|%>
+        <% break if count == 2%>
+        <%tweet = @tweets[i]%>
+        <%= link_to tweet_path(tweet)  do%>
+          <p class="text-primary border-bottom mb-2 py-1"><%= tweet.tweet %></p>
+        <%end%>
+        <% count += 1%>
+      <%end%>
+    <%end%>
+    </div>
+    <div class="card-footer">
+      <p>show more</p>
+    </div>
+  </div>
+
+  <div class="card bg-light mt-2 border-rad">
+    <div class="card-header">
+      <h3 class="font-weight-bolder">Who To Follow</h3>
+    </div>
+    <div class="card-body">
+      <p>Follow</p>
+    </div>
+    <div class="card-footer">
+      <p>show more</p>
+    </div>
+  </div>
+</div>    
