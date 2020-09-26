@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
     if user_signed_in?
       @tweets = Tweet.all.order('created_at DESC LIMIT 20')
     else
-      redirect_to new_user_session_path
+      redirect_to new_user_registration_path
     end
   end
 
