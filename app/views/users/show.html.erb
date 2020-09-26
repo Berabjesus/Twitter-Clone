@@ -1,0 +1,22 @@
+<%= render 'tweets/sidebar'%>
+<div class="card col-xl-12">
+  <div class="card-header d-flex">
+    <div class="col-xl-2 pl-0">
+      <img class="rounded-circle" src="https://bulma.io/images/placeholders/64x64.png" alt="">
+    </div>
+    <div class="col-xl-10">
+      <h3><%= @user.name%></h3>
+      <p>@<%= @user.username%></p>
+    </div>
+  </div>
+  <div class="card-body d-flex">
+    <div class="bg-light mr-3">
+      <p>Tweets</p>
+      <p><%= @user.tweets.count%></p>
+    </div>
+    <div>
+      <p>Total Followers </p>
+      <p>0</p>
+    </div>
+  </div>
+</div>

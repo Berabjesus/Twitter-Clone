@@ -29,7 +29,11 @@
       <h3 class="font-weight-bolder">Who To Follow</h3>
     </div>
     <div class="card-body">
-      <p>Follow</p>
+      <% @follow.each do |user|%>
+        <%= link_to user_path(user.id)  do%>
+          <p class="text-primary bg-light border p-2"><%=user.name%></p>
+        <%end%>
+      <%end%>
     </div>
     <div class="card-footer">
       <p>show more</p>

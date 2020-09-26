@@ -16,12 +16,14 @@
         </div>
       <%end%>
       <div class="card-footer border-0 bg-white d-flex justify-content-around">
-        <%= link_to edit_tweet_path(tweet)  do%>
-          <span> <i class="fa fa-pencil"></i></span>
-        <% end%>
-        <%= link_to tweet, method: :delete, data: { confirm: 'Are you sure?' } do%>
-          <span> <i class="fa fa-trash-o"></i></span>
-        <% end%>
+        <% if current_user.id == tweet.user.id %>
+          <%= link_to edit_tweet_path(tweet)  do%>
+            <span> <i class="fa fa-pencil"></i></span>
+          <% end%>
+          <%= link_to tweet, method: :delete, data: { confirm: 'Are you sure?' } do%>
+            <span> <i class="fa fa-trash-o"></i></span>
+          <% end%>
+        <%end%>
       </div>
     </div>
   </div>

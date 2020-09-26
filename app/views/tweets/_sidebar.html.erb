@@ -29,5 +29,9 @@
       <p class="bold-font">Profile</p>
     </div>
   <%end%>
+  <div class="border bg-light">
+    <h3>Hi <%= current_user.name%></h3>
+    <p>Total Tweets:  <%= current_user.tweets.count%></p>
+  </div>
 </aside>
 <div class="d-flex col-xl-9 offset-xl-3 pl-0">
