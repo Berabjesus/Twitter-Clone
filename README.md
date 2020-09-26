@@ -6,7 +6,7 @@
 [![License: MIT][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-## See the test version Live here - > [Live Link](https://fierce-tundra-31623.herokuapp.com)
+## See the Live version here - > [Live Link](https://fierce-tundra-31623.herokuapp.com)
 
 <img src="./app/assets/images/2.JPG" width="1200px" height="500px" />
 
