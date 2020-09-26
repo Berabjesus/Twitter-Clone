@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'users/show'
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :tweets
   resources :users, only: [:show]
-  root to:'tweets#index'
+  root to: 'tweets#index'
 end
