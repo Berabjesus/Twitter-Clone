@@ -6,7 +6,7 @@
 [![License: MIT][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<img src="./app/assets/images/1.JPG" width="100%" height="500" />
+<img src="./app/assets/images/1.JPG" width="1200px" height="500px" />
 
 ## Built With
 
