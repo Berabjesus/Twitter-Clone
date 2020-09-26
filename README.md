@@ -1,24 +1,58 @@
-# README
+# Twitter Clone
+> This is a Microverse, Technical curriculum, Ruby on Rails Twitter Clone Project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![License: MIT][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Things you may want to cover:
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby on Rails
+- Devise
+- Bootstrap
+- postgresql
+- VScode
+- Rubocop
 
-* Configuration
+## Author
 
-* Database creation
+👤 **Bereket Beshane**
 
-* Database initialization
+- Github: [@berabjesus](https://github.com/Berabjesus)
+- Twitter: [@bereket_ababu_b](https://twitter.com/bereket_ababu_b)
+- Linkedin: [linkedin](https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/)
 
-* How to run the test suite
+## 🤝 Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions, issues and feature requests are welcome!
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Heroku
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/Berabjesus/Twitter-Clone
+[contributors-url]: https://github.com/Berabjesus/Twitter-Clone/contributors
+[forks-shield]: https://img.shields.io/github/forks/Berabjesus/Twitter-Clone
+[forks-url]: https://github.com/Berabjesus/Twitter-Clone/network/members
+[stars-shield]: https://img.shields.io/github/stars/Berabjesus/Twitter-Clone
+[stars-url]: https://github.com/Berabjesus/Twitter-Clone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Berabjesus/Twitter-Clone
+[issues-url]: https://github.com/Berabjesus/Twitter-Clone/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://github.com/Berabjesus/Twitter-Clone/development/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/bereket-beshane-a1b75a1a9/
